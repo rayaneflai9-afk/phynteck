@@ -19,4 +19,11 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // ADD THESE LINES FOR NETLIFY DEPLOYMENT
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+    sourcemap: false
+  },
+  base: "/"  // This is crucial for Netlify
 }));
